@@ -22,7 +22,7 @@
 
 .big-container {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     height: 250px;
     width: 80%;
@@ -36,12 +36,12 @@
 
 .medium-container {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
+    justify-content: center;
+    align-items: center;
     height: 250px;
     width: 40%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     border: 1px solid;
     border-radius: 30px;
     border-color: yellow;

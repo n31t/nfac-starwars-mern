@@ -3,6 +3,9 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  margin: -8px;
+  margin: 0px;
 }
 
+.height {
+  height: 100vh;
+}

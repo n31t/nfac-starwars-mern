@@ -13,22 +13,24 @@ const PlanetDetail = () => {
     useEffect(() => {
         const fetchPlanet = async () => {
           try {
-            const planetData = await getPlanet(id);
+            const response = await getPlanet(id);
+            const planetData = response.data;
             setPlanet(planetData);
             const residentsData = await Promise.all(
               planetData.residents.map(async (residentUrl) => {
                 const residentId = residentUrl.split('/')[5];
-                const residentData = await getResident(residentId);
+                const residentResponse = await getResident(residentId);
+                const residentData = residentResponse.data;
                 return residentData;
               })
             );
             setResidents(residentsData);
+            console.log(planetData)
             setLoaded(true);
           } catch (error) {
             console.error('Error fetching planet details:', error);
           }
         };
-    
         fetchPlanet();
       }, [id]);
 
@@ -39,9 +41,9 @@ const PlanetDetail = () => {
           </div>
         );
       }
-
     return (
-        <div className="big-container">
+    <div>
+    <div className="big-container">
       <div className="planet-info">
         <img
           className="planet"
@@ -60,6 +62,7 @@ const PlanetDetail = () => {
         <p><strong>Gravity:</strong> {planet.gravity}</p>
         <p><strong>Surface Water:</strong> {planet.surface_water}%</p>
         <p><strong>Terrain:</strong> {planet.terrain}</p>
+      </div>
       </div>
       <div className="medium-container">
         <div className="text">

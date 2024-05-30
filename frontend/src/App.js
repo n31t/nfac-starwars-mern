@@ -23,7 +23,8 @@ import PlanetDetail from './components/PlanetDetail';
 function App() {
   return (
     <Router>
-      <div className="container">
+      <body>
+      <div class="height">
         <TopBar />
           <Routes>
             <Route path="/" element={<Navigate to="/main-page" replace />} />
@@ -32,6 +33,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
       </div>
+      </body>
     </Router>
   );
 }
