@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import axios from 'axios';
+import cors from 'cors';
 import { logRequest } from './logger.js';
 
 mongoose
@@ -14,6 +15,7 @@ const api = 'https://swapi.dev/api';
 
 //TODO Code refactoring
 app.use(express.json());
+app.use(cors());
 
 app.get('/api/healthcheck', (req, res) => {
     res.send('API is working');
