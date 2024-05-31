@@ -52,7 +52,7 @@ const Search = () => {
                 />
             </div>
             <div className="search-results">
-                <h2>Planets</h2>
+                <h2 class="category-text">Planets</h2>
                 <div className="search-container">
                     {planets.map((planet) => (
                         <Link key={planet.name} to={`/planets/${planet.url.split('/')[5]}`} class="a-link">
@@ -67,7 +67,7 @@ const Search = () => {
                         </Link>
                     ))}
                 </div>
-                <h2>People</h2>
+                <h2 class="category-text">People</h2>
                 <div className="search-container">
                     {people.map((person) => (
                         <Link key={person.name} to={`/people/${person.url.split('/')[5]}`} class="a-link">
@@ -82,7 +82,7 @@ const Search = () => {
                         </Link>
                     ))}
                 </div>
-                <h2>Starships</h2>
+                <h2 class="category-text">Starships</h2>
                 <div className="search-container">
                     {starships.map((starship) => (
                         <Link key={starship.name} to={`/starships/${starship.url.split('/')[5]}`} class="a-link">
