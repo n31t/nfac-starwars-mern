@@ -11,3 +11,8 @@ export const getResident = async (id) => {
     const response = await axios.get(`${BASE_URL}/people/${id}/`);
     return response;
   };
+
+export const getStarship = async (id) => {
+    const response = await axios.get(`${BASE_URL}/starships/${id}/`);
+    return response;
+  }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getPlanet, getResident } from './starwarsService';
 import load from '../assets/images/load.png';
+import planetimg from '../assets/images/default.png';
 import './PlanetDetail.css';
 
 const PlanetDetail = () => {
@@ -21,6 +22,7 @@ const PlanetDetail = () => {
                 const residentId = residentUrl.split('/')[5];
                 const residentResponse = await getResident(residentId);
                 const residentData = residentResponse.data;
+                residentData.id = residentId;
                 return residentData;
               })
             );
@@ -45,10 +47,10 @@ const PlanetDetail = () => {
     <div>
     <div className="big-container">
       <div className="planet-info">
-        <img
+      <img
           className="planet"
-          src={`assets/images/${id}.png`}
-          onError={(e) => { e.target.src = 'assets/images/default.png'; }}
+          src={`${process.env.PUBLIC_URL}/images/${id}.png`}
+          onError={(e) => { e.target.src = planetimg; }}
           alt={planet.name}
         />
       </div>

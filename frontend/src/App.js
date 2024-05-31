@@ -5,6 +5,8 @@ import BigText from './components/BigText';
 import NotFound from './components/NotFound';
 import TopBar from './components/TopBar';
 import PlanetDetail from './components/PlanetDetail';
+import PersonDetail from './components/PersonDetail';
+import StarshipDetail from './components/StarshipDetail';
 
 
 
@@ -30,6 +32,8 @@ function App() {
             <Route path="/" element={<Navigate to="/main-page" replace />} />
             <Route path="/main-page" element={<BigText />} />
             <Route path="/planets/:id" element={<PlanetDetail />} />
+            <Route path="/people/:id" element={<PersonDetail />} />
+            <Route path="/starships/:id" element={<StarshipDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
       </div>
