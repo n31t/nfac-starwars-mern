@@ -1,4 +1,4 @@
-# Project Title
+# StarWars Planet Exploring
 
 This project is a full-stack application that uses Node.js for the backend, React.js for the frontend, and MongoDB for database operations. The backend fetches data from the Star Wars API (SWAPI) and logs some data to MongoDB.
 
