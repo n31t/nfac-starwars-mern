@@ -8,6 +8,7 @@ import PlanetDetail from './components/PlanetDetail';
 import PersonDetail from './components/PersonDetail';
 import StarshipDetail from './components/StarshipDetail';
 import Planets from './components/Planets';
+import Search from './components/Search';
 
 
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/planets/:id" element={<PlanetDetail />} />
             <Route path="/people/:id" element={<PersonDetail />} />
             <Route path="/starships/:id" element={<StarshipDetail />} />
+            <Route path="/search" element={<Search />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
       </div>

@@ -21,3 +21,18 @@ export const getPlanetListCounter = async () => {
     const response = await axios.get(`${BASE_URL}/planets/`);
     return response;
 }
+
+export const searchPlanets = async (query) => {
+    const response = await axios.get(`${BASE_URL}/search/planets?search=${query}`)
+    return response;
+}
+
+export const searchPeople = async (query) => {
+    const response = await axios.get(`${BASE_URL}/search/people?search=${query}`)
+    return response;
+}
+
+export const searchStarships = async (query) => {
+    const response = await axios.get(`${BASE_URL}/search/starships?search=${query}`)
+    return response;
+}
