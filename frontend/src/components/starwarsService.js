@@ -16,3 +16,8 @@ export const getStarship = async (id) => {
     const response = await axios.get(`${BASE_URL}/starships/${id}/`);
     return response;
   }
+
+export const getPlanetListCounter = async () => {
+    const response = await axios.get(`${BASE_URL}/planets/`);
+    return response;
+}
